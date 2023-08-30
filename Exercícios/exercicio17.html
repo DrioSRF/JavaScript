@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 17</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 17</h2>
+            <p>Clique no botão e mostrarei os 10 primeiros dígitos da sequencia de Fibonacci</p>
+            <input type = "button" value = "Calcular" onclick = "fibonacciDez()"/><br><br>
+            Resultado: <input type = "text" name = "Calcular" id = "1" size="22"/><br>
+        </center>
+
+        <script>
+            let fibonacciDez = () => {
+                var saida = "0, 1, 1, ";
+
+                var fib1 = 1;
+                var fib2 = 1;
+                var aux;
+
+                for(var i = 1; i < 9; i++){
+
+                    if(i != 8){
+                        aux = fib2;
+                        fib2 = fib1 + fib2;
+                        fib1 = aux;
+                        saida += fib2 + ", "
+                    }
+
+                    else{
+                        aux = fib2;
+                        fib2 = fib1 + fib2;
+                        fib1 = aux;
+                        saida += fib2 + "."
+                    }
+
+                }
+
+                document.getElementById('1').value = saida;
+            }
+        </script>
+    </body>
+</html>

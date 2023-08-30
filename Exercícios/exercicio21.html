@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 21</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 21</h2>
+            <p>Digite uma frase, direi quantas palavras tem nela. Clique no botão a baixo para ver o resultado</p>
+            <input type = "text" name = "campo1" id = "campo1" size = "70"/><br><br>
+            <input type = "button" value = "Executar" onclick = "concatenaVet(document.getElementById('campo1').value)"/><br><br>
+            Resultado: <input type = "text" name = "Calcular" id = "1"/><br>
+        </center>
+
+        <script>
+
+            let concatenaVet = (entrada) => {
+                var cont = 0;
+
+                for(var i = 0; i < entrada.length; i++){
+                    if(entrada[i] === " "){
+                        cont++;
+                    }
+                }
+
+                if(entrada[entrada.length - 1] != " "){
+                    cont++;
+                }
+
+                document.getElementById('1').value = cont;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 10</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 10</h2>
+            <p>Digite um caractere e uma palavra, direi quantas vezes ele aparece nessa palavra.</p>
+            Caractere: <input type = "text" name = "campo1" id = "campo1"/><br>
+            Palavra: <input type = "text" name = "campo2" id = "campo2"/><br>
+            <input type = "button" value = "Executar" onclick = "contCar(document.getElementById('campo1').value, document.getElementById('campo2').value)"/><br>
+            Resultado: <input type = "text" name = "Contar" id = "1"/><br>
+        </center>
+
+        <script>
+            let contCar = (car, word) => {
+                var cont = 0;
+                for(var i = 0; i < word.length; i++){
+                    if (car === word[i]){
+                        cont++;
+                    }
+                }
+                document.getElementById('1').value = cont;
+            }
+        </script>
+    </body>
+</html>

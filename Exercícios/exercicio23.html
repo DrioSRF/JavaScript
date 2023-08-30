@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 23</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 23</h2>
+            <p>Dadas as informações fornecidas, formarei uma frase descrevendo um objeto.</p>
+            <input type = "button" value = "Executar" onclick = "descreve(endereco)"/><br><br>
+            Resultado: <input type = "text" name = "Calcular" id = "1" size = "70"/><br>
+        </center>
+
+        <script>
+            var endereco = {
+                rua: "Av do CPA",
+                numero: 1293,
+                bairro: "Jardim Cuiabá",
+                cidade: "Cuiabá",
+                uf: "MT"
+            };
+
+            let descreve = (obj) => {
+                var saida = `O usuário mora em ${obj.cidade} / ${obj.uf}, no bairro ${obj.bairro}, na ${obj.rua}, no ${obj.numero}.`;
+
+                document.getElementById('1').value = saida;
+            }
+        </script>
+    </body>
+</html>

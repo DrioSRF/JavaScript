@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 04</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+        <script>
+            let area = (base, altura) => {
+                var a = base * altura;
+                document.getElementById('resultado').value = a/2;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 04</h2>
+            <p>Digite a base e a altura de um triângulo, direi a sua área.</p>
+            Base: <input type = "number" name = "campo1" id = "campo1"/><br>
+            Altura: <input type = "number" name = "campo2" id = "campo2"/><br>
+            <input type = "button" value = "Calcular" onclick = "area(document.getElementById('campo1').value, document.getElementById('campo2').value)"/><br>
+            Área: <input type = "text" name = "resultado" id = "resultado"/><br>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 26</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 26</h2>
+            <p>Digite quantos anos de experiência você tem, direi se você é júnior, pleno, senior ou grão mestre jedi. Clique no botão a baixo para ver o resultado</p>
+            Anos de experiência: <input type = "text" name = "campo1" id = "campo1"/><br><br>
+            <input type = "button" value = "Executar" onclick = "experiencia(document.getElementById('campo1').value)"/><br><br>
+            Resultado: <input type = "text" name = "Calcular" id = "1"/><br>
+        </center>
+
+        <script>
+            let experiencia = (anos) => {
+                var saida;
+
+                if(anos > 6){
+                    saida = "Grão Mestre Jedi.";
+                }
+
+                else if(anos > 3){
+                    saida = "Senior."
+                }
+
+                else if(anos > 1){
+                    saida = "Pleno."
+                }
+
+                else if(anos <= 1){
+                    saida = "Júnior."
+                }
+
+                document.getElementById('1').value = saida;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 27</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 27</h2>
+            <p>Dadas as informações do exercício, irei formar uma frase para cada objeto no vetor de objetos.</p>
+            <input type = "button" value = "Executar" onclick = "listInfo(usuarios)"/>
+        </center>
+
+        <script>
+            var usuarios = [{
+                nome: "Douglas",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Elton",
+                habilidades: ["PHP", "Ruby on Rails", "Laravel"]
+            }];
+
+            let listInfo = (users) => {
+                var tem = false;
+                var saida = "";
+
+                for(var i = 0; i < users.length; i++){
+
+                    saida += `O ${users[i].nome} possui as habilidades: `
+
+                    for(var j = 0; j < users[i].habilidades.length; j++){
+
+                        if(j != users[i].habilidades.length - 1){
+
+                            saida += `${users[i].habilidades[j]}, `
+                        }
+
+                        else{
+                            
+                            saida += `${users[i].habilidades[j]}<br>`
+                        }
+                    }
+                }
+
+                document.write(saida);
+            }
+        </script>
+    </body>
+</html>

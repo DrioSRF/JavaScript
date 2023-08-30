@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 07</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 07</h2>
+            <p>Digite uma palavra, direi quantas vogais ela tem, mas ignorarei vogais acentuadas.</p>
+            Digite aqui ->: <input type = "text" name = "campo1" id = "campo1"/><br>
+            <input type = "button" value = "Executar" onclick = "numVogais(document.getElementById('campo1').value)"/><br>
+            Número de vogais: <input type = "text" name = "numVogais" id = "1"/><br>
+        </center>
+
+        <script>
+            let numVogais = (palavra) => {
+                var num = 0;
+                for(var i = 0; i < palavra.length; i++){
+                    if (palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u' ||
+                    palavra[i] == 'A' || palavra[i] == 'E' || palavra[i] == 'I' || palavra[i] == 'O' || palavra[i] == 'U'){
+                        num++;
+                    }
+                }
+                document.getElementById('1').value = num;
+            }
+        </script>
+    </body>
+</html>

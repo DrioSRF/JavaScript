@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 15</title>
+        <style>
+            body{font: 12pt Arial;}
+            button{font-size: 12pt; padding: 15px;}
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Exercício 15</h2>
+            <p>Dado o array [4, -5, 6, -7, 8, 9, 10, -15, -20] direi qual elemento é o maior. Clique no botão a baixo para ver o resultado</p>
+            <input type = "button" value = "Executar" onclick = "maiorFromVet(vetor)"/><br><br>
+            Resultado: <input type = "text" name = "Calcular" id = "1"/><br>
+        </center>
+
+        <script>
+            var vetor = [4, -5, 6, -7, 8, 9, 10, -15, -20];
+            let maiorFromVet = (vet) => {
+                var maior = vet[0];
+
+                for (var i = 1; i < vet.length; i++){
+                    if(vet[i] > maior){
+                        maior = vet[i];
+                    }
+                }
+
+                document.getElementById('1').value = maior;
+            }
+        </script>
+    </body>
+</html>
